@@ -1544,6 +1544,10 @@ class _Ping(BaseHTTPRequestHandler):
 
     def log_message(self, *args):
         pass
+    
+    def do_HEAD(self):
+        self.send_response(200)
+        self.end_headers()
 
 
 def _run_web() -> None:
